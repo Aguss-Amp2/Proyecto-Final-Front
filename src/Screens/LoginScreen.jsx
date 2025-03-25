@@ -90,7 +90,7 @@ const LoginScreen = () => {
               )
             }
           </div>
-          <span className="a-password" onClick={handleClickReset}>Olvide mi Contraseña</span>
+          <button className="a-password" onClick={handleClickReset}>Olvide mi Contraseña</button>
         </form>
       </div>
     </div>
