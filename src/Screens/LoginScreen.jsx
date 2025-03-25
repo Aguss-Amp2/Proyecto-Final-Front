@@ -45,7 +45,11 @@ const LoginScreen = () => {
 
   const handleClick = () => {
     navigate('/register')
-}
+  }
+
+  const handleClickReset = () => {
+    navigate('/reset-password')
+  }
 
   const handleSumbitForm = async (event) => {
     event.preventDefault();
@@ -86,7 +90,7 @@ const LoginScreen = () => {
               )
             }
           </div>
-          <Link className="a-password" to="http://localhost:5173/reset-password">Olvide mi Contraseña</Link>
+          <span className="a-password" onClick={handleClickReset}>Olvide mi Contraseña</span>
         </form>
       </div>
     </div>
