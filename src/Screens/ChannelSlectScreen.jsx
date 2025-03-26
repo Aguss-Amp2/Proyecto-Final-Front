@@ -16,7 +16,7 @@ const ChannelSelectScreen = () => {
     const {formState, handleChangeInput} = useForm(initialFormState)
     const { postJwtRequest, getListMessages} = useApiRequest(ENVIROMENT.URL_API + `/api/channels/${channel_id}/messages`)
     const { responseApiState, getListChannel} = useApiRequest(`${ENVIROMENT.URL_API}/api/channels/${workspace_id}`)
-    const {fetchWorkspaceName } = useApiRequest(ENVIROMENT.URL_API + `/api/workspaces/${workspace_id}/channel`)
+    const { fetchWorkspaceName } = useApiRequest(ENVIROMENT.URL_API + `/api/workspaces/${workspace_id}/channel`)
 
     const token = sessionStorage.getItem('authorization_token')
     const navigate = useNavigate()

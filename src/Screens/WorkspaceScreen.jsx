@@ -7,117 +7,117 @@ import { useApiRequest } from "../hooks/useApiRequest.jsx"
 import { useForm } from "../hooks/useForm.jsx"
 
 const WorkspaceScreen = () => {
-    const navigate = useNavigate();
-    const { isAuthenticatedState } = useContext(AuthContext);
-    const email = isAuthenticatedState ? sessionStorage.getItem('email') : '';
-    
-    const { responseApiState, getListWorkspaces, postJwtRequest } = useApiRequest(ENVIROMENT.URL_API + '/api/workspaces');
-    const { postInvitedRequest } = useApiRequest(ENVIROMENT.URL_API);
-    const { getUserIdByEmail } = useApiRequest(ENVIROMENT.URL_API);
+    const navigate = useNavigate()
+    const { isAuthenticatedState } = useContext(AuthContext)
+    const email = isAuthenticatedState ? sessionStorage.getItem('email') : ''
 
-    const [isLoading, setIsLoading] = useState(false);
-    const [showSpinner, setShowSpinner] = useState(false);
-    const [successMessage, setSuccessMessage] = useState(""); // Estado para el mensaje de éxito
+    const { responseApiState, getListWorkspaces, postJwtRequest } = useApiRequest(ENVIROMENT.URL_API + '/api/workspaces')
+    const { postInvitedRequest } = useApiRequest(ENVIROMENT.URL_API)
+    const { getUserIdByEmail } = useApiRequest(ENVIROMENT.URL_API)
+
+    const [isLoading, setIsLoading] = useState(false)
+    const [showSpinner, setShowSpinner] = useState(false)
+    const [successMessage, setSuccessMessage] = useState("")
 
     useEffect(() => {
         if (isLoading) {
             setShowSpinner(true);
             const timer = setTimeout(() => {
-                setShowSpinner(false);
+                setShowSpinner(false)
             }, 2000);
 
-            return () => clearTimeout(timer);
+            return () => clearTimeout(timer)
         }
-    }, [isLoading]);
+    }, [isLoading])
 
     const initialFormState = {
         name: ''
-    };
+    }
 
-    const { formState, handleChangeInput } = useForm(initialFormState);
-    const token = sessionStorage.getItem('authorization_token');
+    const { formState, handleChangeInput } = useForm(initialFormState)
+    const token = sessionStorage.getItem('authorization_token')
 
     const handleClick = async () => {
         try {
-            await postJwtRequest(formState, token);
-            await getListWorkspaces();
-            handleChangeInput({ target: { name: "name", value: "" } });
+            await postJwtRequest(formState, token)
+            await getListWorkspaces()
+            handleChangeInput({ target: { name: "name", value: "" } })
         } catch (error) {
-            console.error("Error al agregar el workspace:", error);
+            console.error("Error al agregar el workspace:", error)
         }
-    };
+    }
 
     const handleSumbitForm = async (event) => {
-        event.preventDefault();
-        setIsLoading(true);
+        event.preventDefault()
+        setIsLoading(true)
 
-        await new Promise(resolve => setTimeout(resolve, 2000));
+        await new Promise(resolve => setTimeout(resolve, 2000))
 
         if (formState.name) {
             await postJwtRequest(formState, token);
         } else {
-            console.log('Error ingrese los dos campos');
+            console.log('Error ingrese los dos campos')
         }
-        setIsLoading(false);
-    };
+        setIsLoading(false)
+    }
 
     useEffect(() => {
         if (isAuthenticatedState) {
-            getListWorkspaces();
+            getListWorkspaces()
         }
-    }, [isAuthenticatedState]);
+    }, [isAuthenticatedState])
 
-    const [emailInputs, setEmailInputs] = useState({});
-    const [invitedUserIds, setInvitedUserIds] = useState({});
+    const [emailInputs, setEmailInputs] = useState({})
+    const [invitedUserIds, setInvitedUserIds] = useState({})
 
     const handleEmailChange = (workspaceId, e) => {
-        const { value } = e.target;
+        const { value } = e.target
         setEmailInputs((prev) => ({
             ...prev,
             [workspaceId]: value,
-        }));
-    };
+        }))
+    }
 
     const handleClickWorkspace = (workspace_id) => {
         if (workspace_id) {
             navigate(`/${workspace_id}`);
         } else {
-            console.log('Workspace ID is undefined');
+            console.log('Workspace ID is undefined')
         }
-    };
+    }
 
     const handleInviteMember = async (workspace_id) => {
-        const invitedEmail = emailInputs[workspace_id];
-        const token = sessionStorage.getItem("authorization_token");
+        const invitedEmail = emailInputs[workspace_id]
+        const token = sessionStorage.getItem("authorization_token")
 
         if (!token) {
-            console.error('Token no disponible');
-            return;
+            console.error('Token no disponible')
+            return
         }
 
-        let invitedUserId = invitedUserIds[invitedEmail];
+        let invitedUserId = invitedUserIds[invitedEmail]
 
         if (!invitedUserId) {
-            invitedUserId = await getUserIdByEmail(invitedEmail, token);
+            invitedUserId = await getUserIdByEmail(invitedEmail, token)
             if (invitedUserId) {
                 setInvitedUserIds((prev) => ({
                     ...prev,
                     [invitedEmail]: invitedUserId,
-                }));
+                }))
             } else {
                 console.error('No se pudo obtener el ID del usuario');
-                return;
+                return
             }
         }
 
-        const success = await postInvitedRequest(workspace_id, invitedUserId, token);
+        const success = await postInvitedRequest(workspace_id, invitedUserId, token)
         if (success) {
-            setEmailInputs((prev) => ({ ...prev, [workspace_id]: "" }));
-            setSuccessMessage("Miembro agregado correctamente"); // Mostrar mensaje de éxito
+            setEmailInputs((prev) => ({ ...prev, [workspace_id]: "" }))
+            setSuccessMessage("Miembro agregado correctamente")
         } else {
-            console.error('Error al invitar al miembro');
+            console.error('Error al invitar al miembro')
         }
-    };
+    }
 
     return (
         <div className="father">
