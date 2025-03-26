@@ -504,7 +504,7 @@
     }
 }
 
-@media (max-width: 440px) {
+@media (max-width: 500px) {
     /* Login/Register/rewrite/reset */
     .content {
         width: 90%;
