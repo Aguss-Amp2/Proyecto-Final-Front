@@ -556,12 +556,12 @@
 
     .a-password {
         margin-top: 20px;
-        font-size: 14px;
+        font-size: 12px;
     }
+
     .a-password:hover {
         color: rgb(255, 255, 255);
         font-weight: bold;
-        font-size: 12px;
     }
 
     /* Workspace */
