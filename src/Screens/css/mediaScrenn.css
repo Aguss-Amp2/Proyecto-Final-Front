@@ -508,7 +508,7 @@
     /* Login/Register/rewrite/reset */
     .content {
         width: 90%;
-        max-width: 320px;
+        max-width: 70%;
         height: auto;
         padding: 15px;
     }
@@ -566,7 +566,7 @@
     /* Workspace */
     .box-workspaces {
         width: 290px;
-        height: 90%;
+        height: 70%;
         padding: 20px;
     }
 
