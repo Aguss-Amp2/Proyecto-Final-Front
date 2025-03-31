@@ -9,7 +9,6 @@ const RewritePassword = () => {
     const navigate = useNavigate()
     const [searchParams] = useSearchParams(window.location.search)
     const reset_token = searchParams.get('reset_token')
-    console.log(reset_token)
     useEffect(
         ()=>{
             
