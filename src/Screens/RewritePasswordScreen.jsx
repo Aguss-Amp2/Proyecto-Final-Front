@@ -9,6 +9,12 @@ const RewritePassword = () => {
     const navigate = useNavigate()
     const [searchParams] = useSearchParams()
     const reset_token = searchParams.get('reset_token')
+    
+    const initialFormState = {
+        password: '',
+        reset_token: reset_token || ''
+    }
+    
     useEffect(
         ()=>{
             
@@ -18,12 +24,6 @@ const RewritePassword = () => {
         },
         [reset_token]
     )
-
-    const initialFormState = {
-        password: '',
-        reset_token: reset_token || ''
-    }
-
     const { formState, handleChangeInput } = useForm(initialFormState)
     const { responseApiState, putRequest } = useApiRequest(ENVIROMENT.URL_API + '/api/auth/rewrite-password')
 
