@@ -627,6 +627,7 @@ textarea::-webkit-scrollbar-thumb:hover {
 }
 
 .span-resp{
+    padding-top: 20px;
     color: beige;
     font-size: 16px;
 }

@@ -372,6 +372,9 @@
     .email-profile{
         font-size: 90px;
     }
+    .span-resp{
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 800px) {
@@ -827,6 +830,9 @@
     }
 
     .cont-email-text .span-mail{
+        font-size: 10px;
+    }
+    .span-resp{
         font-size: 10px;
     }
 }
