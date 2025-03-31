@@ -8,8 +8,9 @@ import { ENVIROMENT } from '../config/enviroment.js'
 const RewritePassword = () => {
     const navigate = useNavigate()
     const [searchParams] = useSearchParams()
-    const reset_token = searchParams.get('reset_token')
-    
+    console.log('Todos los parámetros:', searchParams.toString())
+    const reset_token = searchParams.get('reset_token') || ''
+    console.log('Reset-token:', reset_token)
     const initialFormState = {
         password: '',
         reset_token: reset_token || ''
