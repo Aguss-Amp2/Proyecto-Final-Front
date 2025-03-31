@@ -7,7 +7,7 @@ import { ENVIROMENT } from '../config/enviroment.js'
 
 const RewritePassword = () => {
     const navigate = useNavigate()
-    const [searchParams] = useSearchParams(window.location.search)
+    const [searchParams] = useSearchParams()
     const reset_token = searchParams.get('reset_token')
     useEffect(
         ()=>{
@@ -16,12 +16,12 @@ const RewritePassword = () => {
                 navigate('/login')
             }
         },
-        []
+        [reset_token]
     )
 
     const initialFormState = {
         password: '',
-        reset_token
+        reset_token: reset_token || ''
     }
 
     const { formState, handleChangeInput } = useForm(initialFormState)
