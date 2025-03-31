@@ -18,6 +18,7 @@ function App() {
         <Route path='/' element={<LoginScreen/>}/>
         <Route path='/reset-password' element={<ResetPassword />} />
         <Route path='/rewrite-password' element={<RewritePassword />} />
+        <Route path='/verify-email' element={<VerifyEmailScreen />} />
 
         <Route element={<ProtectedRoute/>}>
           <Route path='/workspaces' element={<WorkspaceScreen />} />
