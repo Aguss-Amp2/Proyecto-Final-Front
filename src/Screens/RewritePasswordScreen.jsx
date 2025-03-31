@@ -23,6 +23,7 @@ const RewritePassword = () => {
         },
         []
     )
+    console.log("Reset Token:", reset_token)
     
     const { formState, handleChangeInput } = useForm(initialFormState)
     const { responseApiState, putRequest } = useApiRequest(ENVIROMENT.URL_API + '/api/auth/rewrite-password')
@@ -54,8 +55,10 @@ const RewritePassword = () => {
         setIsLoading(true)
 
         await new Promise(resolve => setTimeout(resolve, 2000))
+        console.log("Enviando:", { password: formState.password, reset_token });
 
-        await putRequest({ password: formState.password, reset_token })
+        const response = await putRequest({ password: formState.password, reset_token })
+        console.log("Respuesta API:", response)
         setIsLoading(false)
     }
 
