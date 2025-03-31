@@ -7,8 +7,7 @@ import { ENVIROMENT } from '../config/enviroment'
 
 const RewritePassword = () => {
     const navigate = useNavigate()
-    /* Forma con react router dom */
-    const [searchParams] = useSearchParams(window.location.search)
+    const [searchParams] = useSearchParams()
     const reset_token = searchParams.get('reset_token')
     useEffect(
         ()=>{
@@ -17,7 +16,7 @@ const RewritePassword = () => {
                 navigate('/login')
             }
         },
-        []
+        [reset_token]
     )
 
     const initialFormState = {
@@ -53,6 +52,11 @@ const RewritePassword = () => {
     const handleSubmitForm = async (e) => {
         e.preventDefault()
         setIsLoading(true)
+        if (!reset_token) {
+            console.error("Error: reset_token no está definido")
+            setIsLoading(false)
+            return
+        }
 
         await new Promise(resolve => setTimeout(resolve, 2000))
 
