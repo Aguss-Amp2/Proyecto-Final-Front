@@ -38,7 +38,7 @@ const ResetPassword = () => {
     return (
         <div className="father">
             <div className="content">
-                <h1>Ingrese su Email</h1>
+                <h1 className='reset-h1'>Ingrese su Email</h1>
                 <form className="options form" onSubmit={handleSumbitForm}>
                     <div>
                         <label htmlFor="email" className="label-login-email-password">Email :</label>
