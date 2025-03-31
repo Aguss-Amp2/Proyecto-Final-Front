@@ -102,7 +102,6 @@ export const useApiRequest = (url) => {
     const putRequest = async (body) => {
         try{
             setResponseApiState({...initialResponseApiState, loading: true})
-            const token = sessionStorage.getItem('authorization_token')
             const response = await fetch(
                 url,
                 {
