@@ -8,6 +8,7 @@ import ProtectedRoute from './Components/ProtectedRoute.jsx'
 import WorkspaceScreen from './Screens/WorkspaceScreen.jsx'
 import ChannelScreen from './Screens/ChannelScreen.jsx'
 import ChannelSelectScreen from './Screens/ChannelSlectScreen.jsx'
+import VerifyEmailScreen from './Screens/VerifyCountScreen.jsx'
 
 function App() {
   return (
