@@ -3,6 +3,7 @@ import './css/mediaScrenn.css'
 import { useForm } from '../hooks/useForm.jsx'
 import { useApiRequest } from '../hooks/useApiRequest.jsx'
 import { ENVIROMENT } from '../config/enviroment.js'
+import { useNavigate } from 'react-router-dom'
 
 const ResetPassword = () => {
     const initialFormState = {
@@ -13,6 +14,7 @@ const ResetPassword = () => {
     const { responseApiState, postRequest } = useApiRequest(ENVIROMENT.URL_API + '/api/auth/reset-password')
     const [isLoading, setIsLoading] = useState(false)
     const [showSpinner, setShowSpinner] = useState(false)
+    const navigate = useNavigate()
 
     useEffect(() => {
         if (isLoading) {
@@ -35,6 +37,11 @@ const ResetPassword = () => {
         setIsLoading(false)
     }
 
+    const handleRewrite = () => {
+        navigate('/rewrite-password')
+
+    }
+
     return (
         <div className="father">
             <div className="content">
@@ -55,7 +62,7 @@ const ResetPassword = () => {
                         ) : responseApiState.data ? (
                             <span className="span-resp">Ya se le mando el link a su Mail</span>
                         ) : (
-                            <button type='submit'>Enviar</button>
+                            <button type='submit' onClick={handleRewrite}>Enviar</button>
                         )
                     }
                 </form>
