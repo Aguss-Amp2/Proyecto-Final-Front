@@ -3,7 +3,6 @@ import React ,{ createContext, useEffect, useState } from "react"
 export const AuthContext = createContext()
 
 const AuthContextProvider = ({children}) =>{
-    /* Aca manejen todas las funcionalidades relacionadas al usuario y auth */
     let isAuthenticatedInitialState = sessionStorage.getItem('authorization_token')
     const [isAuthenticatedState, setIsAutheticatedState] = useState(isAuthenticatedInitialState)
     useEffect(

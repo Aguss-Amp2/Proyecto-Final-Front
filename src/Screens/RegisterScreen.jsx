@@ -20,13 +20,12 @@ const RegisterScreen = () => {
 
     useEffect(() => {
         if (isLoading) {
-            setShowSpinner(true);
-            // Después de 2 segundos, ocultamos el spinner
+            setShowSpinner(true)
             const timer = setTimeout(() => {
                 setShowSpinner(false)
-            }, 2000);
+            }, 2000)
 
-            return () => clearTimeout(timer)// Limpiar el timer si el componente se desmonta o se vuelve a ejecutar
+            return () => clearTimeout(timer)
         }
     }, [isLoading])
 
