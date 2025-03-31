@@ -14,15 +14,6 @@ const RewritePassword = () => {
         reset_token: reset_token || ''
     }
     
-    useEffect(
-        ()=>{
-            
-            if(!reset_token) {
-                navigate('/login')
-            }
-        },
-        [reset_token]
-    )
     const { formState, handleChangeInput } = useForm(initialFormState)
     const { responseApiState, putRequest } = useApiRequest(ENVIROMENT.URL_API + `/api/auth/rewrite-password?reset_token=${reset_token}`)
 
