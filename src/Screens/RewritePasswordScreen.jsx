@@ -24,7 +24,7 @@ const RewritePassword = () => {
         [reset_token]
     )
     const { formState, handleChangeInput } = useForm(initialFormState)
-    const { responseApiState, putRequest } = useApiRequest(ENVIROMENT.URL_API + '/api/auth/rewrite-password')
+    const { responseApiState, putRequest } = useApiRequest(ENVIROMENT.URL_API + `/api/auth/rewrite-password?reset_token=${reset_token}`)
 
     const [isLoading, setIsLoading] = useState(false)
     const [showSpinner, setShowSpinner] = useState(false)
