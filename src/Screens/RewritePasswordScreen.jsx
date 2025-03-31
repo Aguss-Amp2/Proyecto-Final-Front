@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import './css/mediaScrenn.css'
 import { useNavigate, useSearchParams } from 'react-router-dom'
-import { useForm } from '../hooks/useForm'
-import { useApiRequest } from '../hooks/useApiRequest'
-import { ENVIROMENT } from '../config/enviroment'
+import { useForm } from '../hooks/useForm.jsx'
+import { useApiRequest } from '../hooks/useApiRequest.jsx'
+import { ENVIROMENT } from '../config/enviroment.js'
 
 const RewritePassword = () => {
     const navigate = useNavigate()
