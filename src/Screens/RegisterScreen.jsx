@@ -90,11 +90,7 @@ const RegisterScreen = () => {
                         ?   <div className="spinner" role="status" aria-label="Cargando" aria-live="polite">
                                 <span className="visually-hidden"></span>
                             </div>
-                        : responseApiState.data ? (
-                            <span className="span-resp">Ya se le mando el link a su Mail</span>
-                        ) : (
-                            <button type="submit" onClick={handleLogin}>Registrar</button>
-                        )
+                        : <button type="submit" onClick={handleLogin}>Registrar</button>
                     }
                 </form>
             </div>
