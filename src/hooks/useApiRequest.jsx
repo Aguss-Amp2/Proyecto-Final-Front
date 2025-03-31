@@ -102,13 +102,14 @@ export const useApiRequest = (url) => {
     const putRequest = async (body) => {
         try{
             setResponseApiState({...initialResponseApiState, loading: true})
-                
+            const token = sessionStorage.getItem('authorization_token')
             const response = await fetch(
                 url,
                 {
                     method: 'PUT',
                     headers: {
-                        'Content-Type': 'application/json'
+                        'Content-Type': 'application/json',
+                        "Authorization": `Bearer ${token}`
                     },
                     body: JSON.stringify(body)
                 }
