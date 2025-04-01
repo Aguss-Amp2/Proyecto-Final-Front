@@ -114,6 +114,8 @@ const WorkspaceScreen = () => {
         if (success) {
             setEmailInputs((prev) => ({ ...prev, [workspace_id]: "" }))
             setSuccessMessage("Miembro agregado correctamente")
+        } else {
+            alert("Error al invitar usuario")
         }
     }
 
