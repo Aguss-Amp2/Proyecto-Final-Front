@@ -115,7 +115,7 @@ const WorkspaceScreen = () => {
             setEmailInputs((prev) => ({ ...prev, [workspace_id]: "" }))
             setSuccessMessage("Miembro agregado correctamente")
         } else {
-            console.error('Error al invitar al miembro')
+            setSuccessMessage("Miembro No existe")
         }
     }
 
