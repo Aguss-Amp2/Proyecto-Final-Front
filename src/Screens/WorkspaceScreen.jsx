@@ -105,7 +105,7 @@ const WorkspaceScreen = () => {
                     [invitedEmail]: invitedUserId,
                 }))
             } else {
-                console.error('No se pudo obtener el ID del usuario');
+                alert('No se pudo obtener el ID del usuario')
                 return
             }
         }
