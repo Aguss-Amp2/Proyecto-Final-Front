@@ -115,7 +115,7 @@ const WorkspaceScreen = () => {
             setEmailInputs((prev) => ({ ...prev, [workspace_id]: "" }))
             setSuccessMessage("Miembro agregado correctamente")
         } else {
-            <span>Ese Miembro no esta Registrado</span>
+            alert('Error al invitar al miembro no existe')
         }
     }
 
