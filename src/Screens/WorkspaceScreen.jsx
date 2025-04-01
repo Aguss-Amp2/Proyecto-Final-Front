@@ -115,7 +115,7 @@ const WorkspaceScreen = () => {
             setEmailInputs((prev) => ({ ...prev, [workspace_id]: "" }))
             setSuccessMessage("Miembro agregado correctamente")
         } else {
-            setSuccessMessage("El miembro ya esta agregado")
+            setSuccessMessage("El miembro ya existe en el Workspaces")
         }
     }
 
