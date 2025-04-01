@@ -106,6 +106,7 @@ const WorkspaceScreen = () => {
                 }))
             } else {
                 setSuccessMessage("Este miembro no esta registrado")
+                setMessageType("error")
                 return
             }
         }
@@ -143,7 +144,7 @@ const WorkspaceScreen = () => {
                 </div>
 
                 {successMessage && (
-                    <div className="success-message">
+                    <div className={`success-message ${messageType === "error" ? "error" : "success"}`}>
                         {successMessage}
                     </div>
                 )}
