@@ -106,7 +106,6 @@ const WorkspaceScreen = () => {
                 }))
             } else {
                 setSuccessMessage("Este miembro no esta registrado")
-                setMessageType("error")
                 return
             }
         }
@@ -115,8 +114,6 @@ const WorkspaceScreen = () => {
         if (success) {
             setEmailInputs((prev) => ({ ...prev, [workspace_id]: "" }))
             setSuccessMessage("Miembro agregado correctamente")
-        } else {
-            alert('Error al invitar al miembro no existe')
         }
     }
 
