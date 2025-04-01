@@ -114,7 +114,6 @@ export const useApiRequest = (url) => {
             )
 
             const data = await response.json()
-            console.log(data)
     
             if(data.ok){
                 setResponseApiState((prevState) =>{
