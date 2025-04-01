@@ -10,13 +10,23 @@
     --five-primary-color: #050505;
     --box-color: rgb(173, 72, 219);
 }
-/* LoginScreen */
+/* Screens */
 .father {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
+
+.h3-login-mid{
+    margin-bottom: 18px;
+    color: beige;
+}
+
+.h3-login{
+    color: beige;
+}
+
 
 .form {
     display: flex;
@@ -88,6 +98,7 @@ button:hover {
 
 .a-password {
     margin-top: 30px;
+    margin-bottom: 20px;
     color: rgba(238, 227, 227, 0.897);
     font-weight: bold;
 }

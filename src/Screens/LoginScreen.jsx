@@ -52,12 +52,12 @@ const LoginScreen = () => {
   }
 
   const handleSumbitForm = async (event) => {
-    event.preventDefault();
+    event.preventDefault()
     setIsLoading(true)
 
     await new Promise(resolve => setTimeout(resolve, 2000))
 
-    await postRequest(formState);
+    await postRequest(formState)
 
     setIsLoading(false)
   }
@@ -65,7 +65,9 @@ const LoginScreen = () => {
   return (
     <div className="father">
       <div className="content">
-        <h1>Inicio de sesion</h1>
+        <h1>Inicia Sesion</h1>
+        <h3 className="h3-login-mid">y</h3>
+        <h3 className="h3-login">Crea tu nueva area de Trabajo</h3>
         <form onSubmit={handleSumbitForm} className="options form">
           <div>
             <label htmlFor="email" className="label-login-email-password">Email :</label>

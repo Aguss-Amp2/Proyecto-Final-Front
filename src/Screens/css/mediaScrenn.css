@@ -19,7 +19,18 @@
 
     h1 {
         font-size: 70px;
-        margin-bottom: 70px;
+    }
+
+    .h3-login-mid{
+        font-size: 40px;
+        margin-bottom: 40px;
+        color: beige;
+    }
+    
+    .h3-login{
+        font-size: 40px;
+        color: beige;
+        margin-bottom: 60px;
     }
 
     label {
