@@ -482,11 +482,6 @@ textarea::-webkit-scrollbar-thumb:hover {
     margin-top: 10px;
 }
 
-.error {
-    color: #721c24;
-}
-
-
 .create-h1 {
     font-size: 38px;
     margin-bottom: 40px;
