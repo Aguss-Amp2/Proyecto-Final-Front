@@ -141,7 +141,7 @@ const WorkspaceScreen = () => {
                 </div>
 
                 {successMessage && (
-                    <div className={`success-message ${messageType === "error" ? "error" : "success"}`}>
+                    <div className="success-message">
                         {successMessage}
                     </div>
                 )}
