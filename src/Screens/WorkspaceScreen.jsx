@@ -105,7 +105,7 @@ const WorkspaceScreen = () => {
                     [invitedEmail]: invitedUserId,
                 }))
             } else {
-                setSuccessMessage("Este miembro no esta registrado")
+                setSuccessMessage("No existe un miembro con ese mail")
                 return
             }
         }
