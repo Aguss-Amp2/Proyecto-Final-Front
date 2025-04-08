@@ -5,7 +5,7 @@
 
 /* Media Query */
 
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
     /* Ajustes generales */
     .content {
         width: 40%;
@@ -523,7 +523,7 @@
     }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 600px) {
     /* Login/Register/rewrite/reset */
     .content {
         width: 90%;
