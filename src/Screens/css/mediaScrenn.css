@@ -523,7 +523,7 @@
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 580px) {
     /* Login/Register/rewrite/reset */
     .content {
         width: 90%;
