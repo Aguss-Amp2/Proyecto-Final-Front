@@ -45,7 +45,8 @@ const RegisterScreen = () => {
     return (
         <div className="father">
             <div className="content">
-                <h1>Registrate</h1>
+                <img src="./public/slack-wordmark.svg" alt="slack-logo" className="img-logo"/>
+                <h1 className="h1-inicio">Registrate</h1>
                 <form onSubmit={handleSumbitForm} className="options form">
                     <div>
                         <label htmlFor="username" className="label-login-email-password">Usuario :</label>
@@ -90,7 +91,7 @@ const RegisterScreen = () => {
                         ?   <div className="spinner" role="status" aria-label="Cargando" aria-live="polite">
                                 <span className="visually-hidden"></span>
                             </div>
-                        : <button type="submit" onClick={handleLogin}>Registrar</button>
+                        : <button className="btn-regist" type="submit" onClick={handleLogin}>Registrar</button>
                     }
                 </form>
             </div>

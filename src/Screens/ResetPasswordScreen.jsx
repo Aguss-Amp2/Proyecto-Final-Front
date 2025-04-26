@@ -39,7 +39,8 @@ const ResetPassword = () => {
     return (
         <div className="father">
             <div className="content">
-                <h1 className='reset-h1'>Ingrese su Email</h1>
+                <img src="./public/slack-wordmark.svg" alt="slack-logo" className="img-logo-r"/>
+                <h1 className="h1-inicio">Ingrese su Email</h1>
                 <form className="options form" onSubmit={handleSumbitForm}>
                     <div>
                         <label htmlFor="email" className="label-login-email-password">Email :</label>

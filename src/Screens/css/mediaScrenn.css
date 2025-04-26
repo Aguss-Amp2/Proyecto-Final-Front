@@ -525,6 +525,12 @@
 
 @media (max-width: 600px) {
     /* Login/Register/rewrite/reset */
+    .img-logo {
+        margin-top: 10px;
+        width: 140px;
+        height: 60px;
+    }
+    
     .content {
         width: 90%;
         height: auto;
@@ -547,6 +553,12 @@
         justify-content: flex-start;
         text-shadow: 3px 2px 4px rgba(7, 6, 6, 0.6);
         margin-top: 25px;
+    }
+
+    .h1-inicio{
+        margin-top: -20px;
+        color: black;
+        text-shadow: none;
     }
 
     input {
