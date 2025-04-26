@@ -80,11 +80,11 @@ input {
     border: 1px solid rgba(97, 95, 95, 0.61);
     outline: none;
     font-weight: bold;
-    color: rgba(0, 0, 0, 0.815);
+    color: rgb(0, 0, 0);
 }
 
 input::placeholder {
-    color: black; 
+    color: rgba(0, 0, 0, 0.774); 
     opacity: 1; 
 }
 
