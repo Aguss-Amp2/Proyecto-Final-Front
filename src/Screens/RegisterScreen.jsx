@@ -4,6 +4,7 @@ import { ENVIROMENT } from "../config/enviroment.js"
 import { useForm } from "../hooks/useForm.jsx"
 import { useApiRequest } from "../hooks/useApiRequest.jsx"
 import { useNavigate } from "react-router-dom"
+import Icono from "./Icono.jsx"
 
 const RegisterScreen = () => {
     const formInitialState = {
@@ -45,7 +46,7 @@ const RegisterScreen = () => {
     return (
         <div className="father">
             <div className="content">
-                <img src="./public/slack-wordmark.svg" alt="slack-logo" className="img-logo"/>
+                <img src={Icono} alt="slack-logo" className="img-logo"/>
                 <h1 className="h1-inicio">Registrate</h1>
                 <form onSubmit={handleSumbitForm} className="options form">
                     <div>

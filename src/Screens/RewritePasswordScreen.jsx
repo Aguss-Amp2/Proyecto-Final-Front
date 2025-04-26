@@ -4,6 +4,7 @@ import { useNavigate, useSearchParams } from 'react-router-dom'
 import { useForm } from '../hooks/useForm.jsx'
 import { useApiRequest } from '../hooks/useApiRequest.jsx'
 import { ENVIROMENT } from '../config/enviroment.js'
+import Icono from './Icono.jsx'
 
 const RewritePassword = () => {
     const navigate = useNavigate()
@@ -62,7 +63,7 @@ const RewritePassword = () => {
     return (
         <div className="father">
             <div className="content">
-                <img src="./public/slack-wordmark.svg" alt="slack-logo" className="img-logo-r"/>
+                <img src={Icono} alt="slack-logo" className="img-logo-r"/>
                 <h1 className="h1-inicio">Cambiar Contraseña</h1>
                 <form className="options form" onSubmit={handleSubmitForm}>
                     <div>

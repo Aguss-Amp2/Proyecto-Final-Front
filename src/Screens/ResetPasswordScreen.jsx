@@ -3,6 +3,7 @@ import './css/mediaScrenn.css'
 import { useForm } from '../hooks/useForm.jsx'
 import { useApiRequest } from '../hooks/useApiRequest.jsx'
 import { ENVIROMENT } from '../config/enviroment.js'
+import Icono from './Icono.jsx'
 
 const ResetPassword = () => {
     const initialFormState = {
@@ -39,7 +40,7 @@ const ResetPassword = () => {
     return (
         <div className="father">
             <div className="content">
-                <img src="./public/slack-wordmark.svg" alt="slack-logo" className="img-logo-r"/>
+                <img src={Icono} alt="slack-logo" className="img-logo-r"/>
                 <h1 className="h1-inicio">Ingrese su Email</h1>
                 <form className="options form" onSubmit={handleSumbitForm}>
                     <div>
