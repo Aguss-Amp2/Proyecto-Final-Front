@@ -136,13 +136,23 @@ button:hover {
     padding: 40px;
     gap: 20px;
     background-color: beige;
-    border: 2px solid #6d4876;
-    border-radius: 8px;
+    border: 6px solid #6d4876;
+    border-radius: 10px;
     position: relative;
 }
 
+.box-title-work{
+    display: relative;
+    margin: -40px;
+    width: 688px;
+    border-radius: 4px;
+    background-color: #ecdeec;
+}
+
 .h1-work {
+    font-size: 20px;
     color: Black;
+    text-shadow: 1px 2px 2px rgba(7, 6, 6, 0.6);
 }
 
 .cont-workspaces{

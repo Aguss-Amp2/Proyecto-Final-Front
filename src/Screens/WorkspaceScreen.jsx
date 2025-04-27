@@ -122,7 +122,9 @@ const WorkspaceScreen = () => {
     return (
         <div className="father">
             <div className="box-workspaces">
-                <h1 className="h1-work">Espacios de trabajo de: {email}</h1>
+                <div className="box-title-work">
+                    <h1 className="h1-work">Espacios de trabajo de: {email}</h1>
+                </div>
                 <div className="cont-workspaces">
                     <ul>
                         {responseApiState && responseApiState.data && responseApiState.data.length > 0 ? (
