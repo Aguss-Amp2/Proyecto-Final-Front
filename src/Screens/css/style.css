@@ -237,15 +237,15 @@ button:hover {
 /* Channel */
 .h1-channel{
     display: flex;
-    color: beige;
-    justify-content: flex-start;
+    color: black;
+    justify-content: center;
     font-size: 35px;
 }
 .h2-channel{
     display: flex;
     font-size: 20px;
-    color: beige;
-    justify-content: flex-start;
+    color: black;
+    justify-content: center;
 }
 
 .box-channels{
@@ -258,6 +258,7 @@ button:hover {
     flex-wrap: wrap;
     overflow-y: auto;
 }
+
 .content-channel {
     display: flex;
     flex-direction: column;
@@ -330,11 +331,16 @@ button:hover {
     width: auto;
     border-radius: 12px;
     padding: 4px;
-    background-color: rgb(161, 49, 196);
+    background-color: #611f69;
+}
+
+.input-channel::placeholder{
+    color: beige;
 }
 
 .input-channel{
-    background-color: rgb(161, 49, 196);
+    color: beige;
+    background-color: #611f69;
 }
 
 .chat {
