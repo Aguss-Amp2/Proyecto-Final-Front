@@ -249,6 +249,14 @@ button:hover {
     justify-content: center;
 }
 
+.cont-channels{
+    display: flex;
+    justify-self: center;
+    margin-top: 20px;
+    height: 350px;
+    overflow: auto;
+}
+
 .box-channels{
     display: flex;
     justify-content: center;

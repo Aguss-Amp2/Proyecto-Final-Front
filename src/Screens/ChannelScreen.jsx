@@ -72,7 +72,7 @@ const ChannelScreen = () => {
             <div className="box-workspaces">
                 <h1 className="h1-channel">Bienvenido</h1>
                 <h2 className="h2-channel">Elige un Canal</h2>
-                <div className="cont-workspaces">
+                <div className="cont-channels">
                     <ul className="box-channels">
                         {responseApiState && responseApiState.data && responseApiState.data.length > 0 || isLoading ? (
                             responseApiState.data.map((channel, index) => (
