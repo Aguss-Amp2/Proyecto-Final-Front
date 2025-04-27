@@ -151,7 +151,6 @@
 
     .btn-box {
         display: flex;
-        height: 200px;
         justify-content: center;
         flex-direction: row;
         gap: 15px;
