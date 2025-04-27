@@ -236,21 +236,6 @@ button:hover {
 
 /* Channel */
 
-.box-channels{
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    flex-direction: column;
-    width: 700px;
-    height: 600px;
-    padding: 40px;
-    gap: 20px;
-    background-color: beige;
-    border: 6px solid #6d4876;
-    border-radius: 10px;
-    position: relative;
-}
-
 .h1-channel{
     display: flex;
     color: black;
