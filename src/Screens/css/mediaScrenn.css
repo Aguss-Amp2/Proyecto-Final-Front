@@ -78,8 +78,7 @@
     }
 
     .h1-work {
-        margin-top: 40px;
-        font-size: 42px;
+        font-size: 30px;
     }
 
     
@@ -99,7 +98,11 @@
         align-items: center;
         flex-direction: row;
         gap: 80px;
-        width: 900px;
+        width: auto;
+    }
+    
+    .form-work{
+        height: 140px;
     }
     
     .button-work{
