@@ -23,16 +23,6 @@
     text-shadow: none;
 }
 
-.h3-login-mid{
-    margin-bottom: 18px;
-    color: beige;
-}
-
-.h3-login{
-    color: beige;
-}
-
-
 .form {
     display: flex;
     flex-direction: column;

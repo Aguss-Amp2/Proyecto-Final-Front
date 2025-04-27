@@ -7,6 +7,24 @@
 
 @media (min-width: 1500px) {
     /* Ajustes generales */
+    .h1-inicio{
+        font-size: 38px;
+        color: black;
+        text-shadow: none;
+    }
+
+    .img-logo {
+        margin-top: 40px;
+        width: 240px;
+        height: 100px;
+    }
+
+    .img-logo-r {
+        margin-bottom: 60px;
+        width: 340px;
+        height: 100px;
+    }
+
     .content {
         width: 40%;
         height: 80%;
@@ -14,37 +32,25 @@
 
     .options {
         flex-direction: column;
-        gap: 60px;
+        gap: 20px;
     }
 
     h1 {
         font-size: 70px;
     }
 
-    .h3-login-mid{
-        font-size: 40px;
-        margin-bottom: 40px;
-        color: beige;
-    }
-    
-    .h3-login{
-        font-size: 40px;
-        color: beige;
-        margin-bottom: 60px;
-    }
-
     label {
-        font-size: 30px;
+        font-size: 24px;
     }
 
     input {
         width: 380px;
-        height: 80px;
-        font-size: 24px;
+        height: 60px;
+        font-size: 20px;
     }
 
     input::placeholder {
-        font-size: 30px;
+        font-size: 20px;
     }
 
     .screnns input {
@@ -55,13 +61,13 @@
     }
 
     button {
-        width: 180px;
-        height: 80px;
-        font-size: 28px;
+        width: 140px;
+        height: 60px;
+        font-size: 20px;
     }
 
     .a-password{
-        font-size: 30px;
+        font-size: 20px;
     }
 
     /* Workspaces */
