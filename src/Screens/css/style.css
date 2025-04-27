@@ -128,7 +128,6 @@ button:hover {
 .box-workspaces {
     display: flex;
     justify-content: space-between;
-    align-items: start;
     text-align: center;
     flex-direction: column;
     width: 700px;
@@ -151,8 +150,8 @@ button:hover {
 
 .h1-work {
     font-size: 20px;
-    color: Black;
-    text-shadow: 1px 2px 2px rgba(7, 6, 6, 0.6);
+    color: rgba(44, 36, 36, 0.904);
+    text-shadow: 1px 2px 2px rgba(59, 53, 53, 0.6);
 }
 
 .cont-workspaces{
@@ -215,9 +214,22 @@ button:hover {
     margin-right: 6px;
 }
 
+.form-work{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.cont-label-name-work {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 10px;
+}
+
 .cont-create-workspace{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: row;
     align-items: flex-end;
 }
@@ -509,9 +521,9 @@ textarea::-webkit-scrollbar-thumb:hover {
 .label-workspaces {
     margin-bottom: 10px;
     font-size: 18px;
-    color: beige;
+    color: black;
+    font-weight: 700;
     justify-content: flex-start;
-    text-shadow: 3px 2px 4px rgba(7, 6, 6, 0.945);
     margin-top: 25px;
 }
 

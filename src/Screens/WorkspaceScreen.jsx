@@ -152,7 +152,7 @@ const WorkspaceScreen = () => {
 
                 <form onSubmit={handleSumbitForm} className="form-work">
                     <div className="cont-create-workspace btn-box">
-                        <div>
+                        <div className="cont-label-name-work">
                             <label htmlFor="workspaces" className="label-workspaces">Nombre del Workspaces : </label>
                             <input type="text" id="name" name="name" placeholder="UTN-TN-MAR-JUEV" className="input-work" value={formState.name} onChange={handleChangeInput} />
                         </div>
