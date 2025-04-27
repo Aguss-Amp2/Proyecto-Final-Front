@@ -156,6 +156,7 @@ button:hover {
 }
 
 .cont-workspaces{
+    margin-top: 20px;
     height: 350px;
     overflow: auto;
 }
