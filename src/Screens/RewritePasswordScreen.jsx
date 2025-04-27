@@ -63,7 +63,7 @@ const RewritePassword = () => {
     return (
         <div className="father">
             <div className="content">
-                <img src={Icono} alt="slack-logo" className="img-logo-r"/>
+                <Icono className="img-logo-r" />
                 <h1 className="h1-inicio">Cambiar Contraseña</h1>
                 <form className="options form" onSubmit={handleSubmitForm}>
                     <div>

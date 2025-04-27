@@ -66,7 +66,7 @@ const LoginScreen = () => {
   return (
     <div className="father">
       <div className="content">
-        <img src={Icono} alt="slack-logo" className="img-logo"/>
+        <Icono className="img-logo" />
         <h1 className="h1-inicio">Iniciar Sesion</h1>
         <form onSubmit={handleSumbitForm} className="options form">
           <div>

@@ -40,7 +40,7 @@ const ResetPassword = () => {
     return (
         <div className="father">
             <div className="content">
-                <img src={Icono} alt="slack-logo" className="img-logo-r"/>
+                <Icono className="img-logo-r" />
                 <h1 className="h1-inicio">Ingrese su Email</h1>
                 <form className="options form" onSubmit={handleSumbitForm}>
                     <div>
