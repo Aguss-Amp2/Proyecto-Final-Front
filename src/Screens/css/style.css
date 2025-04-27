@@ -186,14 +186,15 @@ button:hover {
 .div-button-workspaces {
     display: flex;
     justify-content: center;
+    margin-top: 10px;
     flex-direction: column;
+    width: 600px;
 }
 
 .cont-buttons{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: row;
-    gap: 20px;
 }
 
 .input-workspaces{
