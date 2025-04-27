@@ -162,10 +162,11 @@ button:hover {
 
 .cont-workspaces::-webkit-scrollbar {
     width: 10px;
+    padding-left: 20px;
 }
 
 .cont-workspaces::-webkit-scrollbar-track {
-    background-color: var(--color-content);
+    background-color: beige;
     border-radius: 10px;
 }
 
