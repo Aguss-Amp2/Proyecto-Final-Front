@@ -143,7 +143,7 @@ button:hover {
 .box-title-work{
     display: relative;
     margin: -40px;
-    width: 688px;
+    width: auto;
     border-radius: 4px;
     background-color: #ecdeec;
 }
@@ -189,7 +189,7 @@ button:hover {
     justify-content: center;
     margin-top: 10px;
     flex-direction: column;
-    width: 580px;
+    width: auto;
 }
 
 .cont-buttons{
