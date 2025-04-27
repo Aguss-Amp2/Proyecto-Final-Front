@@ -116,7 +116,6 @@
     
     .input-work {
         width: 340px;
-        height: 70px;
         margin-right: 40px;
     }
 
@@ -608,8 +607,13 @@
         height: 70%;
         padding: 20px;
     }
+    
+    .box-title-work{
+        margin: -20px;
+    }
 
     .h1-work {
+        margin: 0;
         font-size: 20px;
     }
 
@@ -628,6 +632,7 @@
         justify-content: center;
         align-items: flex-end;
         flex-direction: row;
+        gap: 10px;
     }
 
     .input-workspaces {
@@ -664,6 +669,7 @@
         display: flex;
         justify-content: space-between;
         gap: 10px;
+        padding-left: 20px;
     }
 
     .input-work{
