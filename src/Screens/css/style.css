@@ -91,7 +91,7 @@ button {
     border: none;
     font-weight: bold;
     border-radius: 4px;
-    background-color: var(--color-content);
+    background-color: #611f69;
     color: rgb(233, 230, 230);
     font-size: 14px;
     cursor: pointer;
@@ -206,7 +206,7 @@ button:hover {
     width: 40px;
     border: none;
     border-radius: 12px;
-    background-color: rgba(113, 13, 160, 0.897);
+    background-color: #611f69;
     color: rgb(233, 230, 230);
     font-size: 14px;
     cursor: pointer;
