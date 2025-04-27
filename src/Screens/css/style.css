@@ -235,6 +235,14 @@ button:hover {
 }
 
 /* Channel */
+
+.box-channels{
+    display: flex;
+    justify-content: center;
+    height: 350px;
+    overflow: auto;
+}
+
 .h1-channel{
     display: flex;
     color: black;
